@@ -12,24 +12,26 @@ public class GuessingGame {
 		int guess;
 		boolean win = false;
 
-		// Takes user input
-		System.out.println("Guess a number between 0 and 25: ");
-		guess = input.nextInt();
-		numberOfTries++;
+		while (win == false) {
 
-		//Prints "You Win" if user guesses correctly
-		if (guess == randomNumber) {
-			win = true;
-			System.out.println("You Win!");
+			// Takes user input
+			System.out.println("Guess a number between 0 and 25: ");
+			guess = input.nextInt();
+			numberOfTries++;
+
+			//Prints "You Win" if user guesses correctly
+			if (guess == randomNumber) {
+				win = true;
+				System.out.println("You Win!");
+			}
+
+			//	Prints "You lose, the number was " and then prints the random number
+			else if (guess != randomNumber) {
+				System.out.println("You lose, the number was " + randomNumber);
+			}
 		}
 
-		//	Prints "You lose, the number was " and then prints the random number
-		else if (guess != randomNumber) {
-			System.out.println("You lose, the number was " + randomNumber);
-		}
+
 	}
-
-
 }
-
 
